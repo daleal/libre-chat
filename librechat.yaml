@@ -20,7 +20,7 @@ mcpServers:
       - -y
       - tavily-mcp@latest
     env:
-      TAVILY_API_KEY: "{{TAVILY_API_KEY}}"
+      TAVILY_API_KEY: "${TAVILY_API_KEY}"
 
 endpoints:
   agents:
@@ -29,7 +29,6 @@ endpoints:
       - "actions"
       - "tools"
       - "artifacts"
-      - "ocr"
       - "chain"
   custom:
     # groq
@@ -60,3 +59,8 @@ endpoints:
       titleConvo: true
       titleModel: "mixtral-8x7b-32768"
       modelDisplayLabel: "groq"
+
+interface:
+  runCode: false
+  webSearch: false
+  customWelcome: "Hello {{user.name}}"
