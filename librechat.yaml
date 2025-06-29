@@ -58,6 +58,17 @@ endpoints:
       titleModel: "mixtral-8x7b-32768"
       modelDisplayLabel: "groq"
 
+memory:
+  disabled: false
+  personalize: true
+  tokenLimit: 8000
+  messageWindowSize: 10
+  agent:
+    provider: "openAI"
+    model: "gpt-4.1-mini"
+    model_parameters:
+      temperature: 0.3
+
 interface:
   runCode: false
   webSearch: false
